@@ -17,44 +17,18 @@ include ../../fragments/unit_mixins
 - var images = get_images('bees')
 
 
-//- +title_slide({document:document, images:images})
-
-
-//-
-  What grounds our thinking about shared agency?
-  
-  Maybe start with collective goals and distinguishing the thing to be explained from the thing
-  that explains it.
-  
-  Then use this to talk about shared agency too.
-  
-  Examples aren’t enough.
-  
-  Do we want to start with philosophical/commonsense notions? Do these provide a foundation for a theory?
-  
-  I. Cooperation
-  
-  II. Motor Representation
-  
-    Why think about motor representations?
-    Challenges to starting from Intention, Knowledge etc
-      - Very small scale cases
-      - A model with no clear link to mechanisms (vs a model with at least tentative connections to the brain)
-      - Hard to create testable hypotheses with readily testable predictions (and no alternative way to verify theories)
-  
-
 section.slide
   div
     img#titleImg.bkg(src='/img/sunclouds_05.jpg')
   +_slide_inner({blend:'overlay'})
-    .huge-glow-invert-80.center(style="line-height:.7em;")
-      p.center.firsttitle
+    .huge-glow-invert-80(style="line-height:.75em;")
+      p.firsttitle
         span.cooperation Who is responsible   
-      p
-        span for
-      p
-        span.motor-representation global poverty?
-
+        br
+        span for 
+        span.huge-glow-80(style="line-height:.7em;")
+          span global 
+          span poverty?
   +reset
     +_slide_inner
       p.right(style="margin-top:500px;").invert.signature s.butterfill@warwick.ac.uk
@@ -71,36 +45,59 @@ section.slide
       +img_clip('poverty_pandemic.png')
       +style('.fig-over img', {filter:'brightness(5)'})
   p.source https://www.ft.com/content/f45afb9a-aaa3-4434-8d3b-b56e24f0cb37
-
+  .notes: :t
+    As we speak, there are probably over 600m people who live on under $1.90 a day
+    at purchasing power parity (PPP) exchange rates using 2011 prices.
+    This means no healthcare, no education, poor or no housing, and inadequate nutrition.
 
 
 
 +slide_middle
-  p.center Are the problems insoluble?
+  p.center Is the problem insoluble?
   .notes: :t
     I’m no an economist, but ...
 
-+slide_middle
-  p A bank rescue package totalling some £500 billion was announced by the British government on 8 October 2008, as a response to the ongoing global financial crisis.
-  p.right.grey-text https://en.wikipedia.org/wiki/2008_United_Kingdom_bank_rescue_package
-  //- .slide
-  //-   p.em-above UK GDP in 2008: roughly £1600 billion.
 
 +slide
   +img_clip('poverty_economist.jpg')
-  p.source https://www.economist.com/international/2017/03/30/the-world-has-made-great-progress-in-eradicating-extreme-poverty
+  p.source https://www.economist.com/international/2017/03/30/the-world-has-made-great-progress-in-eradicating-extreme-poverty_economist
+  .notes: :t
+    Lots of progress has been made.
+
++slide_middle
+  p 
+    span.blater A bank rescue package totalling some 
+    span £500 billion
+    span.blater  was announced by the British government on 8 October 2008, as a response to the ongoing global financial crisis.
+  p.right.grey-text https://en.wikipedia.org/wiki/2008_United_Kingdom_bank_rescue_package
+  //- .slide
+  //-   p.em-above UK GDP in 2008: roughly £1600 billion.
+  .slide
+    +blur('.blater')
+    p.em-above 
+      span.blater2 Cost of sending money from a rich to a poor person is 
+      span under 13%
+    p.right.grey-text.blater2 (https://www.givedirectly.org/financials/)
+  .slide
+    +blur('.blater2')
+    p.em-above 
+      span In 2008, 
+      span £500 billion 
+      span  could have provided every poor person in the world with at least £435 each
   .notes: :t
     What the UK committed to spend on rescuing banks in 2008 would have been more than enough to lift
     every person in the world out of poverty for that entire year.
+  .notes: :t
+    Extreme poverty is one of the easiest, and cheapest, global problems to solve.
   .notes: :t
     But, yes, banks are good too.
 
 
 +slide_middle
-  p.center.hem-around.q1 Are the problems insoluble? No
+  p.center.hem-around.q1 Is the problem insoluble? No
   .slide
     +blur('.q1')
-    p.center.hem-around.q2 Who should act? 
+    p.center.hem-around.q2 Who will solve them? 
     .notes: :t
       China. It’s not going to be the generosity of others but
       the ambitions and actions of the poorest countries.
@@ -162,6 +159,62 @@ section.slide
 
 +slide_middle
   p.hem-around  Two perspectives on poverty-caused deaths.
+  .hem-around
+    p needs-based
+    p.indent We citizens of affluent countries 
+    p.indent have a positive duty to meet needs.
+  .harm.hem-around
+    p harm-based
+    p.indent We have a negative duty not to harm.
+  +highlight-row('.harm')
+
++slide_middle
+  p: :t
+    Key premise:
+    a just institional order cannot ‘foreseeably reproduce avoidable human rights deficits on a massive scale’.
+
++slide_middle({timer:true})
+  p.notes.handout.show.hem-around.claim1: :t
+    1. ‘Global institutional arrangements
+    are causally implicated in the reproduction of’ extreme poverty.
+  .slide
+    +blur('.claim1')
+    p.notes.handout.show.hem-around.claim2: :t
+      2. ‘Governments of [...] affluent countries bear primary responsibility for these
+      global institutional arrangements and can foresee their detrimental
+      effects.’ 
+  .slide
+    +blur('.claim2')
+    p.notes.handout.show.hem-around.claim3: :t
+      3. ‘there is a feasible institutional alternative under which such severe and extensive poverty would not persist’
+  .slide
+    +blur('.claim3')
+    p.notes.handout.show.hem-around.claim4: :t
+      4. ‘many citizens of [...] affluent countries bear responsibility
+      for the global institutional arrangements their governments have
+      negotiated in their names.’
+  .slide
+    +unblur('.claim1, .claim2, .claim3')
+  p.right.grey-text Pogge, 2005
+
+
+
++slide_middle
+  p: span: :t
+    Conclusion
+  p.em-above
+      span ‘we, the citizens and governments of the affluent countries, in 
+      span collusion with the ruling elites of many poor countries, are 
+      span.harm harm
+      span ing 
+      span the global poor by imposing an unjust institutional order upon them‘ 
+  p.right.grey-text: span Pogge, 2005 p. 59
+  .slide
+    +blur('span:not(.harm)')
+
+
++slide_middle
+  p.hem-around  Two perspectives on poverty-caused deaths.
   .slide
     .hem-around
       p needs-based
@@ -175,6 +228,185 @@ section.slide
     +highlight-row('.harm')
 
 
+
++slide_middle
+  p Pogge’s big idea
+  p.em-above From weak assumptions about duties 
+    span.invert not 
+    span  to harm
+  p.em-above it is possible to derive
+  p.em-above a radical conclusion about redistribution.
+  
++slide_middle
+  p Aside
+  .notes.handout.show
+    p.em-above Libertarians
+    //- .slide
+    //-   p.em-above: :t
+    //-     ‘Libertarianism is a family of views in political philosophy.
+    .slide
+      p.em-above: :t
+        ‘strongly value individual freedom and see this as justifying
+        strong protections for individual freedom.’
+    .slide
+      p.em-above: :t
+        ‘usually see the kind of large-scale, coercive wealth
+        redistribution in which contemporary welfare states engage as involving
+        unjustified coercion.’
+      .notes: :t
+        So you can see Libertarians are relevant because they 
+        would probably not accept that there is a duty to help,
+        but would probably accept a duty not to harm.
+  .notes.handout.ctd \citep{vandervossen:2019_libertarianism}
+  p.right.grey-text van der Vossen, 2019
+
+
+
+
+
+
+
+
++slide_middle({timer:true})
+  .hem-around-children
+    p.step2.hide Compare:
+    p Distributive outcomes under the actual international order.
+    p.step2.hide vs
+    p.step2.hide Distributive outcomes likely under a fair international order.
+  .slide
+    +show('.step2')
+  .slide
+    p.em-above: :t
+      The gap between the two sets of
+      outcomes tells us the degree of
+      responsibility of the actual order for
+      the outcomes it is associated with
+  p.right.grey-text Patten, 2005 p. 23
+  .notes.handout: :t
+    ‘We might hypothesize about the
+    distributive outcomes that would be
+    likely to arise under this fair
+    international order and then compare
+    these outcomes with the ones associated with the actual international
+    order. The gap between the two sets of
+    outcomes tells us the degree of
+    responsibility of the actual order for
+    the outcomes it is associated with’
+  .notes.handout.ctd \citep[p.~23]{patten:2005_world}.
+  .notes: :t
+    CONTINUED: ‘Imagine, for instance, that only two million people a year would die of poverty- related causes under a fair international regime, compared with the eighteen million a year who die under the actual one. Then, on this procedural view of how to specify the baseline, we could say that the current international order is causing the death of sixteen million people a year.’  
+  .slide
+    p.em-above example : asymmetric restrictions on trade
+  //- +show-timer
+  //- +start-timer
+
++slide_middle
+  p Patten’s objection
+  p.step2.hide.em-above.notes.handout.show: :t
+    ‘even in a fair international environment there is no guarantee that the
+    policies needed to fight poverty will be introduced domestically ...
+  p.em-above.notes.handout.show: :t
+    ‘even fairly democratic countries, operating under an international set of
+    rules that have been shaped for their own advantage, can routinely fail to
+    enact policies designed to help their poorest and most marginalized
+    citizens.’
+  .notes.handout.ctd \citep[pp.~23--4]{patten:2005_world}.
+  p.right.grey-text Patten, pp. 23--4
+  .slide
+    +show('.step2')
+
++slide_middle({timer:true})
+  p.step1.em-above.notes.handout.show: :t
+    under an ideally fair set of international rules, [...] there would 
+    still be significant numbers of desperately poor
+    people in the world. 
+  .slide
+    p.step1.em-above.notes.handout.show: :t
+      If we think only in terms of harm through unfair international agreements, 
+      ‘these victims of poverty do not count as “harmed” by the
+      affluent countries.’
+  .slide
+    +blur('.step1')
+    p.em-above.notes.handout.show: :t
+      After reforming the international system, 
+      would the affluent have absolved themselves of complicity in
+      the fate of the poor?
+  +show-timer
+  +start-timer
+  .slide
+    p.em-above.notes.handout.show
+      span ‘they would not have eradicated the most morally 
+      span salient fact from a 
+      span.needs needs-based perspective
+      span ---the fact of poverty.’ 
+  .slide
+    +invert('.needs')
+    .notes: :t
+      Background clash between two perspectives.
+      We have a positive duty to meet needs.
+      We have a negative duty not to harm.
+
+
++slide_rh_white({step:false, timer:true})
+  +run_across
+    p.center Patten’s dilemma for Pogge:
+  +left_half
+    p deny that there is an additional duty of assistance
+    .slide
+      p.em-above: :t
+        Objection: ‘property and other rights of the privileged should not be regarded as
+        so absolute as to override a duty to perform easy rescues’
+      .notes: :t
+        This is among the ‘standard objections to libertarianism’
+  .slide
+    +right_half
+      p allow that there is an additional duty of assistance
+      .slide
+        p.em-above: :t
+          Pogge’s view then just amounts to saying that citizens of affluent
+          countries should not only stop harming but should also help.
+      .slide
+        p.em-above: :t
+          It is a partly needs-based, not an exclusively harm-based, argument.
+  //- +show-timer
+  //- +start-timer
+  
+
+
+section.slide
+  .notes: :t
+    So who is responsible?
+  .notes: :t
+    Two thoughts.
+  .notes: :t
+    Pogge establishes that,
+    purely from the perspective that we have a duty not to cause avoidable and forseable harm,
+    you and I, as residents of wealthy countries, 
+    are responsible to some degree.
+  .notes: :t
+    But his critic Patten shows that unless you are a libertarian,
+    there is a further duty which arises from the needs of those who
+    live in extreme poverty.
+
+  div
+    img#titleImg.bkg(src='/img/sunclouds_05.jpg')
+  +_slide_inner({blend:'overlay'})
+    .huge-glow-invert-80(style="line-height:.75em;")
+      p.firsttitle
+        span.cooperation Who is responsible   
+        br
+        span for 
+        span.huge-glow-80(style="line-height:.7em;")
+          span global 
+          span poverty?
+  +reset
+    +_slide_inner
+      p.right(style="margin-top:500px;").invert.signature s.butterfill@warwick.ac.uk
+
+
+
++slide_middle
+  p.huge-glow extra
 
 +slide_middle
   p.center Step 1 : states are morally relevant
@@ -257,3 +489,6 @@ section.slide
   p.center Step 1 : states are morally relevant
 
 
+
++slide_middle
+  p.center Step 2 : 
