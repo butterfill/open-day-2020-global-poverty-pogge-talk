@@ -1,0 +1,259 @@
+---
+layout: 'default2'
+title: 'Who is responsible for global poverty?'
+email: 's.butterfill@warwick.ac.uk'
+weburl: ''
+units: []
+lecture_date: '2017/08/31'
+---
+
+//-
+//- (c) Stephen A. Butterfill 2014
+//-
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+- var images = get_images('bees')
+
+
+//- +title_slide({document:document, images:images})
+
+
+//-
+  What grounds our thinking about shared agency?
+  
+  Maybe start with collective goals and distinguishing the thing to be explained from the thing
+  that explains it.
+  
+  Then use this to talk about shared agency too.
+  
+  Examples aren’t enough.
+  
+  Do we want to start with philosophical/commonsense notions? Do these provide a foundation for a theory?
+  
+  I. Cooperation
+  
+  II. Motor Representation
+  
+    Why think about motor representations?
+    Challenges to starting from Intention, Knowledge etc
+      - Very small scale cases
+      - A model with no clear link to mechanisms (vs a model with at least tentative connections to the brain)
+      - Hard to create testable hypotheses with readily testable predictions (and no alternative way to verify theories)
+  
+
+section.slide
+  div
+    img#titleImg.bkg(src='/img/sunclouds_05.jpg')
+  +_slide_inner({blend:'overlay'})
+    .huge-glow-invert-80.center(style="line-height:.7em;")
+      p.center.firsttitle
+        span.cooperation Who is responsible   
+      p
+        span for
+      p
+        span.motor-representation global poverty?
+
+  +reset
+    +_slide_inner
+      p.right(style="margin-top:500px;").invert.signature s.butterfill@warwick.ac.uk
+
+  +rain({img:'#titleImg'})
+
+
++slide
+  .fig
+    +img_clip('poverty_pandemic.png')
+    +style('.fig img', {filter:'hue-rotate(75deg) brightness(1.75) saturate(2)'})
+  +reset({blend:'overlay'})
+    .fig-over
+      +img_clip('poverty_pandemic.png')
+      +style('.fig-over img', {filter:'brightness(5)'})
+  p.source https://www.ft.com/content/f45afb9a-aaa3-4434-8d3b-b56e24f0cb37
+
+
+
+
++slide_middle
+  p.center Are the problems insoluble?
+  .notes: :t
+    I’m no an economist, but ...
+
++slide_middle
+  p A bank rescue package totalling some £500 billion was announced by the British government on 8 October 2008, as a response to the ongoing global financial crisis.
+  p.right.grey-text https://en.wikipedia.org/wiki/2008_United_Kingdom_bank_rescue_package
+  //- .slide
+  //-   p.em-above UK GDP in 2008: roughly £1600 billion.
+
++slide
+  +img_clip('poverty_economist.jpg')
+  p.source https://www.economist.com/international/2017/03/30/the-world-has-made-great-progress-in-eradicating-extreme-poverty
+  .notes: :t
+    What the UK committed to spend on rescuing banks in 2008 would have been more than enough to lift
+    every person in the world out of poverty for that entire year.
+  .notes: :t
+    But, yes, banks are good too.
+
+
++slide_middle
+  p.center.hem-around.q1 Are the problems insoluble? No
+  .slide
+    +blur('.q1')
+    p.center.hem-around.q2 Who should act? 
+    .notes: :t
+      China. It’s not going to be the generosity of others but
+      the ambitions and actions of the poorest countries.
+  .slide
+    +blur('.q2')
+    p.center.hem-around.q3 Who is morally responsible? 
+  .slide
+    +highlight-row('.q3')
+
+
++slide_middle
+  .qm.hide
+    +question_mark
+  p.notes.handout.show.quote
+    span ‘The common assumption [...] is that 
+    span.noblur reducing severe poverty
+    span   abroad 
+    br 
+    span at the 
+    span expense of our own affluence 
+    br
+    span  would be generous on our part, 
+    br
+    span not something 
+    span we owe, and that 
+    span.noblur our failure to do this
+    span  is thus at most 
+    br
+    span a lack of  
+    span generosity that 
+    span.noblur does not make us morally responsible 
+    br
+    span.noblur  for the continued  deprivation of the poor
+    span ’ 
+  .notes.handout.ctd \citep[p.~2]{pogge:2005_world}
+  p.right.grey-text Pogge, 2005 p. 2
+  +hide('.quote span:not(.noblur)', 0)
+  +hide('.quote span.noblur:gt(0)', 0)
+  .slide
+    +show('.quote span.noblur:eq(1)')
+  .slide
+    +show('.quote span.noblur:gt(1)')
+  .slide
+    +show('.quote span:not(.noblur)')
+  .slide
+    +show('.qm')  
+
+
+//- +slide_middle
+//-   .notes: :t
+//-     Unless they prefer banks to people,
+//-   p Citizens of wealthy countries should eradicate poverty 
+//-     span.slide because 
+//-   .slide
+//-     p.em-above.indent ... they are responsible for the harms it causes (Pogge).
+//-     p.em-above.indent vs
+//-     p.em-above.indent ... they have a moral obligation to help (Patten).
+
+
++slide_middle
+  p.hem-around  Two perspectives on poverty-caused deaths.
+  .slide
+    .hem-around
+      p needs-based
+      p.indent We citizens of affluent countries 
+      p.indent have a positive duty to meet needs.
+  .slide
+    .harm.hem-around
+      p harm-based
+      p.indent We have a negative duty not to harm.
+  .slide
+    +highlight-row('.harm')
+
+
+
++slide_middle
+  p.center Step 1 : states are morally relevant
+
++slide_middle
+  .notes: :t
+    In attempting to see what might be said for moral relevance,
+    I think it is helpful to follow Appiah in distinguishing nation from state ...
+  .handout \subsection{States vs Nations}
+  p.em-above.notes.handout.show 
+    span.nation nation
+    span.nation.df.hide  : ‘an imagined community of culture or ancestry running beyond the scale of the face-to-face and seeking political expression’
+  .notes.handout.ctd \citep[p.~27]{appiah:1996_love}
+  p.em-above.notes.handout.show 
+    span.state state
+    span.state.df.hide s : ‘regulate our lives through forms of coercion that will always require moral justification. 
+    span.state.df.hide State institutions ... are ... necessary to so many modern human purposes ... 
+    span.state.df.hide.why-moral [T]o do its job the state has to have a monopoly on certain forms of authorized coercion
+    span.state.df.hide ’
+  .notes.handout.ctd \citep[p.~28]{appiah:1996_love}
+  p.right.grey-text Appiah, 1996 pp. 27--8
+  .slide
+    +show('.nation.df')
+  .slide
+    +blur('.nation.df')
+    +show('.state.df')
+  .slide
+    +blur('.state.df')
+    .notes: :t
+      Some thing that although nations are ethically irrelevant, states are not ...
+  .slide
+    +unblur('.why-moral')
+    .notes: :t
+      If this is their job, surely states cannot be ethically irrelevant.
+
++slide_rh_white({step:true, timer:true})
+  +run_across
+    p.center Are states morally relevant?
+  .notes: :t
+    Consider two kinds of justification for the claim that states are 
+    morally relevant ...
+  +left_half
+    p.notes.handout.show: :t
+      ‘our obligations as democratic citizens go beyond our duties as politically unorganized individuals, 
+      because our capacity to act effectively to further justice increases when we are empowered as citizens, 
+      and so therefore does our responsibility to act to further justice’
+    .notes.handout.ctd \citep[p.~69]{gutman:1996_love}
+    p.right.grey-text Gutman, 1996 p. 69
+  +right_half({step:true})
+    .hem-around-children
+      p.notes.handout.show: :t
+        1. Commitments cost money and lives.
+      p.notes.handout.show: :t
+        2. It is states which pay.
+      p.notes.handout.show: :t
+        Therefore:
+      p.notes.handout.show: :t
+        3. Citizens have ‘the ethical [and mandatory] right to make distinctions’.
+    .notes.handout.ctd Glazer p. 62
+    p.right.grey-text Glazer, 1996 p. 62
+    .notes.handout: :t
+      \subsection{Mandatory vs Discretionary Rights}
+      A ‘\emph{mandatory right} confers no discretion whatever on its possessor:
+      only one way of exercising it is permitted. It leaves one path open to him but
+      no genuine "option" between paths. It imposes a correlative duty on others to
+      provide that path and leave it unobstructed [...]. If I
+      have a mandatory right to do X then it follows logically that I have [...] a duty to do X. 
+      In the case of mandatory rights, duty and right are entirely coincident’
+      \citep[p.~105]{feinberg:1978_voluntary}.
+    .notes.handout: :t
+      ‘Any discretionary right to something is a right to take it or leave it, as one chooses’
+      \citep[p.~105]{feinberg:1978_voluntary}.
+    .notes.handout: :t
+      ‘I have a  \emph{discretionary right} in
+      respect to X when I have an open option to X or not to X correlated with the
+      duties of others not to interfere with my choice’
+      \citep[p.~105]{feinberg:1978_voluntary}.
+
++slide_middle
+  p.center Step 1 : states are morally relevant
+
+
