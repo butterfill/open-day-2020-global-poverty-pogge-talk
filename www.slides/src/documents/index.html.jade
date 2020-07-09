@@ -16,6 +16,7 @@ include ../../fragments/unit_mixins
 
 - var images = get_images('bees')
 
+//-  the session would last for around 50 minutes, and would comprise (roughly) a 25 minute presentation followed by a 25 minute Q&A. This would all be done live on the online platform Bizzabo, with up to 200 students in attendance. 
 
 section.slide
   div
@@ -23,7 +24,9 @@ section.slide
   +_slide_inner({blend:'overlay'})
     .huge-glow-invert-80(style="line-height:.75em;")
       p.firsttitle
-        span.cooperation Who is responsible   
+        span.cooperation Who is 
+         span.morally.hide.huge-glow-80 morally
+         span  responsible   
         br
         span for 
         span.huge-glow-80(style="line-height:.7em;")
@@ -32,7 +35,8 @@ section.slide
   +reset
     +_slide_inner
       p.right(style="margin-top:500px;").invert.signature s.butterfill@warwick.ac.uk
-
+  .slide
+    +show('.morally')
   +rain({img:'#titleImg'})
 
 
@@ -97,7 +101,7 @@ section.slide
   p.center.hem-around.q1 Is the problem insoluble? No
   .slide
     +blur('.q1')
-    p.center.hem-around.q2 Who will solve them? 
+    p.center.hem-around.q2 Who will solve it? 
     .notes: :t
       China. It’s not going to be the generosity of others but
       the ambitions and actions of the poorest countries.
@@ -134,17 +138,6 @@ section.slide
     span ’ 
   .notes.handout.ctd \citep[p.~2]{pogge:2005_world}
   p.right.grey-text Pogge, 2005 p. 2
-  +hide('.quote span:not(.noblur)', 0)
-  +hide('.quote span.noblur:gt(0)', 0)
-  .slide
-    +show('.quote span.noblur:eq(1)')
-  .slide
-    +show('.quote span.noblur:gt(1)')
-  .slide
-    +show('.quote span:not(.noblur)')
-  .slide
-    +show('.qm')  
-
 
 //- +slide_middle
 //-   .notes: :t
@@ -158,15 +151,17 @@ section.slide
 
 
 +slide_middle
-  p.hem-around  Two perspectives on poverty-caused deaths.
+  p.hem-around  Two perspectives on poverty-caused harms.
   .hem-around
     p needs-based
     p.indent We citizens of affluent countries 
     p.indent have a positive duty to meet needs.
-  .harm.hem-around
-    p harm-based
-    p.indent We have a negative duty not to harm.
-  +highlight-row('.harm')
+  .slide
+    .harm.hem-around
+      p harm-based
+      p.indent We have a negative duty not to harm.
+  .slide
+    +highlight-row('.harm')
 
 +slide_middle
   p: :t
@@ -215,17 +210,14 @@ section.slide
 
 +slide_middle
   p.hem-around  Two perspectives on poverty-caused deaths.
-  .slide
-    .hem-around
-      p needs-based
-      p.indent We citizens of affluent countries 
-      p.indent have a positive duty to meet needs.
-  .slide
-    .harm.hem-around
-      p harm-based
-      p.indent We have a negative duty not to harm.
-  .slide
-    +highlight-row('.harm')
+  .hem-around
+    p needs-based
+    p.indent We citizens of affluent countries 
+    p.indent have a positive duty to meet needs.
+  .harm.hem-around
+    p harm-based
+    p.indent We have a negative duty not to harm.
+  +highlight-row('.harm')
 
 
 
@@ -262,7 +254,8 @@ section.slide
 
 
 
-
++slide_middle
+  p.center.huge-glow objection
 
 
 
@@ -302,37 +295,36 @@ section.slide
 
 +slide_middle
   p Patten’s objection
-  p.step2.hide.em-above.notes.handout.show: :t
+  p.step2.em-above.notes.handout.show: :t
     ‘even in a fair international environment there is no guarantee that the
     policies needed to fight poverty will be introduced domestically ...
-  p.em-above.notes.handout.show: :t
-    ‘even fairly democratic countries, operating under an international set of
-    rules that have been shaped for their own advantage, can routinely fail to
-    enact policies designed to help their poorest and most marginalized
-    citizens.’
-  .notes.handout.ctd \citep[pp.~23--4]{patten:2005_world}.
+  //- p.em-above.notes.handout.show: :t
+  //-   ‘even fairly democratic countries, operating under an international set of
+  //-   rules that have been shaped for their own advantage, can routinely fail to
+  //-   enact policies designed to help their poorest and most marginalized
+  //-   citizens.’
+  //- .notes.handout.ctd \citep[pp.~23--4]{patten:2005_world}.
   p.right.grey-text Patten, pp. 23--4
-  .slide
-    +show('.step2')
+  //- .slide
+  //-   +show('.step2')
 
 +slide_middle({timer:true})
   p.step1.em-above.notes.handout.show: :t
     under an ideally fair set of international rules, [...] there would 
-    still be significant numbers of desperately poor
-    people in the world. 
-  .slide
-    p.step1.em-above.notes.handout.show: :t
-      If we think only in terms of harm through unfair international agreements, 
-      ‘these victims of poverty do not count as “harmed” by the
-      affluent countries.’
+    still be significant severe poverty 
+  //- .slide
+  //-   p.step1.em-above.notes.handout.show: :t
+  //-     If we think only in terms of harm through unfair international agreements, 
+  //-     ‘these victims of poverty do not count as “harmed” by the
+  //-     affluent countries.’
   .slide
     +blur('.step1')
     p.em-above.notes.handout.show: :t
       After reforming the international system, 
       would the affluent have absolved themselves of complicity in
       the fate of the poor?
-  +show-timer
-  +start-timer
+  //- +show-timer
+  //- +start-timer
   .slide
     p.em-above.notes.handout.show
       span ‘they would not have eradicated the most morally 
