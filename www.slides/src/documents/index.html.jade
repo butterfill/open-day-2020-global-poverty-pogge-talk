@@ -19,6 +19,8 @@ include ../../fragments/unit_mixins
 //-  the session would last for around 50 minutes, and would comprise (roughly) a 25 minute presentation followed by a 25 minute Q&A. This would all be done live on the online platform Bizzabo, with up to 200 students in attendance. 
 
 section.slide
+  .notes.
+    Who is responsible for global poverty?
   div
     img#titleImg.bkg(src='/img/sunclouds_05.jpg')
   +_slide_inner({blend:'overlay'})
@@ -37,8 +39,15 @@ section.slide
       p.right(style="margin-top:500px;").invert.signature s.butterfill@warwick.ac.uk
   .slide
     +show('.morally')
+    .notes.
+      I will introduce you to Pogge’s argument that, even if you are a libertarian,
+      and in fact almost whatever position you take in ethics, it’s you who is 
+      responsible for global poverty.
+    .notes.
+      I will also introduce what I take to be one of the best objections.
+    .notes.
+      But let’s start with some facts
   +rain({img:'#titleImg'})
-
 
 +slide
   .fig
@@ -49,7 +58,7 @@ section.slide
       +img_clip('poverty_pandemic.png')
       +style('.fig-over img', {filter:'brightness(5)'})
   p.source https://www.ft.com/content/f45afb9a-aaa3-4434-8d3b-b56e24f0cb37
-  .notes: :t
+  .notes.
     As we speak, there are probably over 600m people who live on under $1.90 a day
     at purchasing power parity (PPP) exchange rates using 2011 prices.
     This means no healthcare, no education, poor or no housing, and inadequate nutrition.
@@ -76,6 +85,12 @@ section.slide
   p.right.grey-text https://en.wikipedia.org/wiki/2008_United_Kingdom_bank_rescue_package
   //- .slide
   //-   p.em-above UK GDP in 2008: roughly £1600 billion.
+  .notes.
+    At the time that was about a third of Britain's GDP.
+  .notes.
+    UK GDP in 2008: roughly £1600 billion.
+  .notes.
+    UK is roughly 5th largest economy in 2008.
   .slide
     +blur('.blater')
     p.em-above 
@@ -116,7 +131,9 @@ section.slide
   .qm.hide
     +question_mark
   p.notes.handout.show.quote
-    span ‘The common assumption [...] is that 
+    span ‘The 
+    span.ca common assumption
+    span  [...] is that 
     span.noblur reducing severe poverty
     span   abroad 
     br 
@@ -138,7 +155,10 @@ section.slide
     span ’ 
   .notes.handout.ctd \citep[p.~2]{pogge:2005_world}
   p.right.grey-text Pogge, 2005 p. 2
-
+  .slide
+    +invert('.ca')
+    .notes.
+      If a philosopher calls something a ‘common assumption' you know that ...
 //- +slide_middle
 //-   .notes: :t
 //-     Unless they prefer banks to people,
@@ -162,39 +182,92 @@ section.slide
       p.indent We have a negative duty not to harm.
   .slide
     +highlight-row('.harm')
+    .notes.
+      So how does Pogge’s argument work?
+    .notes.
+      Pogge has written various books and lots of papers.
+    .notes.
+      But I think much of that boils down to a very simple, beautifully observed argument.
+    .notes.
+      So what I want to do today is just introduce what I take to be the core argument.
+
 
 +slide_middle
   p: :t
     Key premise:
     a just institional order cannot ‘foreseeably reproduce avoidable human rights deficits on a massive scale’.
+  .notes.
+    If you reject this premise it's game over for Pogge.
 
 +slide_middle({timer:true})
   p.notes.handout.show.hem-around.claim1: :t
     1. ‘Global institutional arrangements
     are causally implicated in the reproduction of’ extreme poverty.
+  .notes.
+    One of Pogge's favoured examples are trade agreements, which are very often structured
+    in ways that favour the richer country over the poorer country. They protect some key industry
+    in the richer country, for example.
+  .notes.
+    This is not to say that trade agreements are bad.
+    The point is just that they can have the consequence of making things worse for people
+    vulnerable to the harms of severe poverty. And can avoidably fail to make things better
+    for such people.
   .slide
     +blur('.claim1')
     p.notes.handout.show.hem-around.claim2: :t
       2. ‘Governments of [...] affluent countries bear primary responsibility for these
       global institutional arrangements and can foresee their detrimental
       effects.’ 
+    .notes.
+      As Brexit is about to show people living in Britain, the more powerful side generally gets to
+      shape trade agreemenets.
+    .notes.
+      Moreover, the effects of trade agreements are foreseeable.  We do have history. We do have
+      economics. While neither of these are perfect, they have consistently allowed us to reliably
+      predict the effects of different trade agreements.
   .slide
     +blur('.claim2')
     p.notes.handout.show.hem-around.claim3: :t
       3. ‘there is a feasible institutional alternative under which such severe and extensive poverty would not persist’
+    .notes.
+      There are, clearly, better and worse trade agreements.
+    .notes.
+      We could tweak one of the EU treaties in ways that would benefit a poorer country.
+      Of course it would cost the EU something. 
   .slide
     +blur('.claim3')
     p.notes.handout.show.hem-around.claim4: :t
       4. ‘many citizens of [...] affluent countries bear responsibility
       for the global institutional arrangements their governments have
       negotiated in their names.’
+    .notes.
+      Citizens of affluent countries for the most part are free to vote as they choose.
+      They are free to express opinions and to share their views with those around them.
+    .notes.
+      The citizens of these countries are responsible for the election of Trump, Johnson,
+      Bolsonaro and the others.
+    .notes.
+      And the policies and behaviours of those governments are, ultimately, a matter of the 
+      choices that the citizens of those relatively affluent countries make.
   .slide
     +unblur('.claim1, .claim2, .claim3')
+    .notes.
+      So here’s the argument.
+    .notes.
+      Hard to argue with any of the premises individually.
+    .notes.
+      But when you put them together, you get this striking conclusion.
+    .notes.
+      The conclusions is that citizens of affluent countries bear responsiblity for 
+      the harms of severe poverty
+      *insofar as those are consequences of institutional arrangements*.
   p.right.grey-text Pogge, 2005
 
 
 
 +slide_middle
+  .notes.
+    Here’s the conclusion in Pogge’s own words
   p: span: :t
     Conclusion
   p.em-above
@@ -206,7 +279,8 @@ section.slide
   p.right.grey-text: span Pogge, 2005 p. 59
   .slide
     +blur('span:not(.harm)')
-
+    .notes.
+      Key thing here is the harm.
 
 +slide_middle
   p.hem-around  Two perspectives on poverty-caused deaths.
@@ -218,8 +292,18 @@ section.slide
     p harm-based
     p.indent We have a negative duty not to harm.
   +highlight-row('.harm')
-
-
+  .notes.
+    It’s the harm-based approach that makes the argument interesting.
+  .notes.
+    Not too dificult, if you start from the premise that others have a 
+    duty to help when others are in need and they can help, to show
+    that you and I are responsible for global poverty.
+  .notes.
+    Pogge’s argument works even if you think others’ needs give you no duty at all
+    to help other people.
+  .notes.
+    The responsibility you have for global poverty arise from the duty you have
+    to avoid harm.  
 
 +slide_middle
   p Pogge’s big idea
@@ -233,6 +317,9 @@ section.slide
   p Aside
   .notes.handout.show
     p.em-above Libertarians
+    .notes.
+      Term has been used in a variety of ways ...
+      but one core idea is this ...
     //- .slide
     //-   p.em-above: :t
     //-     ‘Libertarianism is a family of views in political philosophy.
@@ -251,8 +338,15 @@ section.slide
         but would probably accept a duty not to harm.
   .notes.handout.ctd \citep{vandervossen:2019_libertarianism}
   p.right.grey-text van der Vossen, 2019
-
-
+  .notes.
+    Pogge’s argument says that even if you are a libertarian, 
+    so even if you are ideologically opposed to redistribution,
+    you still have a duty to act to alleviate global poverty
+    because it is partly a consequence of harms you could avoid causing. 
+  .notes.
+    So it’s *coherent* to be opposed to universal health care and 
+    other forms of redistribution and yet also insist that you and 
+    those around you are to some degree responsible for global poverty.
 
 +slide_middle
   p.center.huge-glow objection
@@ -290,6 +384,8 @@ section.slide
     CONTINUED: ‘Imagine, for instance, that only two million people a year would die of poverty- related causes under a fair international regime, compared with the eighteen million a year who die under the actual one. Then, on this procedural view of how to specify the baseline, we could say that the current international order is causing the death of sixteen million people a year.’  
   .slide
     p.em-above example : asymmetric restrictions on trade
+    .notes.
+      Why am I excited?
   //- +show-timer
   //- +start-timer
 
@@ -298,6 +394,8 @@ section.slide
   p.step2.em-above.notes.handout.show: :t
     ‘even in a fair international environment there is no guarantee that the
     policies needed to fight poverty will be introduced domestically ...
+  .notes.
+    Particularly clear in Somalia or Syria. Many other corrupt states.
   //- p.em-above.notes.handout.show: :t
   //-   ‘even fairly democratic countries, operating under an international set of
   //-   rules that have been shaped for their own advantage, can routinely fail to
@@ -309,6 +407,8 @@ section.slide
   //-   +show('.step2')
 
 +slide_middle({timer:true})
+  .notes.
+    So here’s the problem.
   p.step1.em-above.notes.handout.show: :t
     under an ideally fair set of international rules, [...] there would 
     still be significant severe poverty 
@@ -323,6 +423,8 @@ section.slide
       After reforming the international system, 
       would the affluent have absolved themselves of complicity in
       the fate of the poor?
+    .notes.
+      This is a tricky question because ...
   //- +show-timer
   //- +start-timer
   .slide
@@ -333,6 +435,9 @@ section.slide
       span ---the fact of poverty.’ 
   .slide
     +invert('.needs')
+    .notes.
+      So Patten’s objection is that we cannot abandon the needs-based 
+      perspective entirely.
     .notes: :t
       Background clash between two perspectives.
       We have a positive duty to meet needs.
@@ -340,6 +445,8 @@ section.slide
 
 
 +slide_rh_white({step:false, timer:true})
+  .notes.
+    We can put Patten’s objection to Pogge as a dilemma
   +run_across
     p.center Patten’s dilemma for Pogge:
   +left_half
@@ -379,7 +486,19 @@ section.slide
     But his critic Patten shows that unless you are a libertarian,
     there is a further duty which arises from the needs of those who
     live in extreme poverty.
-
+  .notes.
+    To conclude, where are we?
+  .notes.
+    Pogge shows that almost whatever moral view you start from,
+    even an extreme Libertarian one,
+    you are as a citizen of a wealthy country to some extent
+    responsible for global poverty.
+  .notes.
+    But Patten’s objection shows that there’s a much stronger
+    form of responsibility you have if you accept as a premise
+    that there you have needs-based responsibilities.
+    That is, others’ needs and your ability to assist mean that you
+    have not only a negative duty to avoid harm but also a positive duty to help.
   div
     img#titleImg.bkg(src='/img/sunclouds_05.jpg')
   +_slide_inner({blend:'overlay'})
@@ -484,5 +603,3 @@ section.slide
 
 
 
-+slide_middle
-  p.center Step 2 : 
