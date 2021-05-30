@@ -22,7 +22,7 @@
     "eventemitter3": "^1.1.1",
     "docpad-plugin-moment": "~2.0.2",
     "jstransformer-coffee-script": "^1.1.0",
-    "ws": "^7.2.1"
+    "ws": "^7.4.6"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
