@@ -126,48 +126,94 @@ section.slide
   .slide
     +highlight-row('.q3')
 
++slide_middle({bkg:'IMG_20210603_201045.jpg'})
+  +hide('img.bkg', 0)
+  div(style='margin-left:250px')
+    p proposal: Top 20% globally give 0.1% to bottom 20%
+    .slide
+      +show('img.bkg')
+      p.em-above Ali lives alone, gets $10,500 / year (roughly £7400).
+      .notes. 
+        She’s in the top 20% globally according to
+        https://howrichami.givingwhatwecan.org/how-rich-am-i?income=10450&countryCode=USA&household%5Badults%5D=1&household%5Bchildren%5D=0
+      .notes.
+        For compairson, full maintenance loan for student living away from home
+        in 2021-2 is £9488 outside london, £12382 inside london.
+      .notes.
+        She’s around 5% by income distribution in the uk.
+        Around 3.33m people in the uk have less income
+        (but may not live alone).
+    .slide
+      +blur('img.bkg', '5px',1000)
+      p.em-above.
+        Ali is a libertarian: she does not believe that others’ needs 
+        morally require her to surrender any of her property.
+      .notes.
+        She’s read Nozick (1974) and, like Nozick, thinks that 
+        ‘redistributive taxation is morally on a part with forced labour’
+        \citep{vandervossen:2019_libertarianism}.
+      .notes.
+        She does give, and she regards herself as generous for doing so.
+        Her point is that she doesn’t owe anyone anything, 
+        and not giving would not be morally wrong on her part.
+        (Superordinate.)
+    .slide
+      p.em-above.
+        Ali therefore rejects the proposal.
+      .notes.
+        What can we say to Ali?
 
-+slide_middle
-  .qm.hide
-    +question_mark
-  p.notes.handout.show.quote
-    span ‘The 
-    span.ca common assumption
-    span  [...] is that 
-    span.noblur reducing severe poverty
-    span   abroad 
-    br 
-    span at the 
-    span expense of our own affluence 
-    br
-    span  would be generous on our part, 
-    br
-    span not something 
-    span we owe, and that 
-    span.noblur our failure to do this
-    span  is thus at most 
-    br
-    span a lack of  
-    span generosity that 
-    span.noblur does not make us morally responsible 
-    br
-    span.noblur  for the continued  deprivation of the poor
-    span ’ 
-  .notes.handout.ctd \citep[p.~2]{pogge:2005_world}
-  p.right.grey-text Pogge, 2005 p. 2
-  .slide
-    +invert('.ca')
-    .notes.
-      If a philosopher calls something a ‘common assumption' you know that ...
+
+
 //- +slide_middle
-//-   .notes: :t
-//-     Unless they prefer banks to people,
-//-   p Citizens of wealthy countries should eradicate poverty 
-//-     span.slide because 
+//-   .qm.hide
+//-     +question_mark
+//-   p.notes.handout.show.quote
+//-     span ‘The 
+//-     span.ca common assumption
+//-     span  [...] is that 
+//-     span.noblur reducing severe poverty
+//-     span   [...] 
+//-     br 
+//-     span at the 
+//-     span expense of our own affluence 
+//-     br
+//-     span  would be generous on our part, 
+//-     span.step2.hide
+//-       br
+//-       span not something 
+//-       span we owe
+//-       span.step3.hide , and that 
+//-     span.step3.hide 
+//-       br
+//-       span.noblur our failure to do this
+//-       span  is thus at most 
+//-       br
+//-       span a lack of  
+//-       span generosity that 
+//-       span.noblur does not make us morally responsible 
+//-       br
+//-       span.noblur  for the continued  deprivation of the poor
+//-     span ’ 
+//-   .notes.handout.ctd \citep[p.~2]{pogge:2005_world}
+//-   p.right.grey-text Pogge, 2005 p. 2
 //-   .slide
-//-     p.em-above.indent ... they are responsible for the harms it causes (Pogge).
-//-     p.em-above.indent vs
-//-     p.em-above.indent ... they have a moral obligation to help (Patten).
+//-     +show('.step2')
+//-   .slide
+//-     +show('.step3')
+//-   .slide
+//-     +invert('.ca')
+//-     .notes.
+//-       If a philosopher calls something a ‘common assumption' you know that ...
+//- //- +slide_middle
+//- //-   .notes: :t
+//- //-     Unless they prefer banks to people,
+//- //-   p Citizens of wealthy countries should eradicate poverty 
+//- //-     span.slide because 
+//- //-   .slide
+//- //-     p.em-above.indent ... they are responsible for the harms it causes (Pogge).
+//- //-     p.em-above.indent vs
+//- //-     p.em-above.indent ... they have a moral obligation to help (Patten).
 
 
 +slide_middle
@@ -176,6 +222,10 @@ section.slide
     p needs-based
     p.indent We citizens of affluent countries 
     p.indent have a positive duty to meet needs.
+    .notes.
+      Ali thinks that it would be generous on her part to give.
+      She does not think that she has done anything wrong by
+      holding on to her wealth.
   .slide
     .harm.hem-around
       p harm-based
@@ -212,6 +262,8 @@ section.slide
     The point is just that they can have the consequence of making things worse for people
     vulnerable to the harms of severe poverty. And can avoidably fail to make things better
     for such people.
+  .notes.
+    A tragic, and more vivid example is vaccine distribution.
   .slide
     +blur('.claim1')
     p.notes.handout.show.hem-around.claim2: :t
