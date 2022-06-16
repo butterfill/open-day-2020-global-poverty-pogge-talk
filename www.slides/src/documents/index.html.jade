@@ -129,7 +129,9 @@ section.slide
 +slide_middle({bkg:'IMG_20210603_201045.jpg'})
   +hide('img.bkg', 0)
   div(style='margin-left:250px')
-    p proposal: Top 20% globally give 0.1% to bottom 20%
+    p proposal: Top 20% globally are 
+      span.required required
+      span  give 0.1% to bottom 20%
     .slide
       +show('img.bkg')
       p.em-above Ali lives alone, gets $10,500 / year (roughly £7400).
@@ -157,6 +159,8 @@ section.slide
         Her point is that she doesn’t owe anyone anything, 
         and not giving would not be morally wrong on her part.
         (Superordinate.)
+    .slide
+      +invert('.required')
     .slide
       p.em-above.
         Ali therefore rejects the proposal.
@@ -263,7 +267,9 @@ section.slide
     vulnerable to the harms of severe poverty. And can avoidably fail to make things better
     for such people.
   .notes.
-    A tragic, and more vivid example is vaccine distribution.
+    Another tragic, and more vivid example is vaccine distribution.
+  .notes.
+    A third example would be tollerance for corrpution.m
   .slide
     +blur('.claim1')
     p.notes.handout.show.hem-around.claim2: :t
@@ -365,7 +371,7 @@ section.slide
   p.em-above it is possible to derive
   p.em-above a radical conclusion about redistribution.
   
-+slide_middle
++slide_middle({bkg:'IMG_20210603_201045.jpg'})
   p Aside
   .notes.handout.show
     p.em-above Libertarians
@@ -376,10 +382,12 @@ section.slide
     //-   p.em-above: :t
     //-     ‘Libertarianism is a family of views in political philosophy.
     .slide
+      +blur('img.bkg', '5px')
       p.em-above: :t
         ‘strongly value individual freedom and see this as justifying
         strong protections for individual freedom.’
     .slide
+      +fade('img.bkg')
       p.em-above: :t
         ‘usually see the kind of large-scale, coercive wealth
         redistribution in which contemporary welfare states engage as involving
@@ -551,6 +559,12 @@ section.slide
     that there you have needs-based responsibilities.
     That is, others’ needs and your ability to assist mean that you
     have not only a negative duty to avoid harm but also a positive duty to help.
+  .notes.
+    [update this: key point is whether the issue of global poverty can be fully
+    addressed in a way that works regardless of ethical starting point.
+    This is valuable because there is enormous diversity in people’s ethical views
+    and little prospect of agreement; so an argument that works for almost any ethical
+    view is especially valuable.]
   div
     img#titleImg.bkg(src='/img/sunclouds_05.jpg')
   +_slide_inner({blend:'overlay'})
@@ -571,10 +585,8 @@ section.slide
 
 
 +slide_middle
-  p.huge-glow extra
-
-+slide_middle
-  p.center Step 1 : states are morally relevant
+  p.center.huge-glow appendix
+  p.center states are morally relevant
 
 +slide_middle
   .notes: :t
@@ -651,7 +663,7 @@ section.slide
       \citep[p.~105]{feinberg:1978_voluntary}.
 
 +slide_middle
-  p.center Step 1 : states are morally relevant
+  p.center states are morally relevant
 
 
 
