@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=http://localhost:8080/schema-project.json
+
+id: J0j-tcShFAXwfrMHM-6H4
+title: Who Is Morally Responsible for Global Poverty? (Open Day Talk)
+url:
+  - https://handouts.butterfill.com/docs/warwick_2022_open_day/warwick_2022_open_day/
+git-remote:
+  - git@github.com:butterfill/open-day-2020-global-poverty-pogge-talk.git
+type: lectures
+location: 
+authors: 
+  - Stephen A. Butterfill
+status: complete
+
